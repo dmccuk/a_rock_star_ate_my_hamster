@@ -3,4 +3,4 @@ Basic python rewrite of one of the greatest 90s games! And completely written by
 
 absolute classic. Please help me to add pictures and improve the gameplay.
 
-![remember this](https://images.app.goo.gl/EbHCA2GMfQo2kvAx8)
+<img src="82150-rock-star-ate-my-hamster-zx-spectrum-front-cover.jpg" alt="Image description" width="50%" />
