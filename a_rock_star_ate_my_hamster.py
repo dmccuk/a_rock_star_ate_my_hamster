@@ -65,15 +65,22 @@ def publicity_stunt():
 
 def bad_publicity():
     reasons = [
-        "A band member accidentally insulted a major music critic on social media.",
-        "Your drummer got into a fight with a famous celebrity at a party.",
-        "A scandalous rumor spread about your lead singer and an exotic pet.",
-        "The band's tour bus was mistakenly painted with an offensive slogan.",
-        "A controversial political statement made by your bassist went viral.",
+        "Your lead singer accidentally set fire to a hotel room while attempting a magic trick.",
+        "Your bassist was caught on camera stealing a famous musician's guitar.",
+        "A viral video showed your drummer insulting a group of fans during a concert.",
+        "Your guitarist got into a fistfight with a paparazzo while leaving a club.",
+        "A tabloid published a story claiming your band's music causes hallucinations.",
+        "Your lead singer was caught on camera eating a live insect during a TV interview.",
+        "A leaked recording revealed your band badmouthing a popular charity organization.",
+        "Your bassist was arrested for streaking during a live television broadcast.",
+        "A video went viral showing your drummer destroying a hotel room with a sledgehammer.",
+        "Your guitarist was caught on camera vandalizing a famous monument while on tour."
     ]
+    return reasons
+
 
     reason = random.choice(reasons)
-    cost = random.randint(100, 500)
+    cost = random.randint(100, 1000)
     print(f"Bad publicity! {reason} You lost {cost} due to the negative attention.")
     return cost
 
@@ -117,7 +124,7 @@ def main():
 
         weeks_remaining -= 2
 
-        if random.random() < 0.1:
+        if random.random() < 0.2:
             budget -= bad_publicity()
 
     print("Game over!")
