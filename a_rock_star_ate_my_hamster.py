@@ -15,7 +15,6 @@ musicians = [
     Musician("Tina Turnoff", 6, 300),
 ]
 
-
 def hire_musician(budget, hired_musicians):
     print("Available musicians:")
     for i, musician in enumerate(musicians):
@@ -32,7 +31,6 @@ def hire_musician(budget, hired_musicians):
         print(f"{musician.name} has been hired!")
     
     return budget
-
 
 def organize_gig(hired_musicians):
     if not hired_musicians:
@@ -62,7 +60,6 @@ def publicity_stunt():
     print(f"The publicity stunt cost {cost}, but you earned {revenue} from the increased exposure.")
     return revenue - cost
 
-
 def bad_publicity():
     reasons = [
         "Your lead singer accidentally set fire to a hotel room while attempting a magic trick.",
@@ -76,14 +73,13 @@ def bad_publicity():
         "A video went viral showing your drummer destroying a hotel room with a sledgehammer.",
         "Your guitarist was caught on camera vandalizing a famous monument while on tour."
     ]
-    return reasons
-
 
     reason = random.choice(reasons)
     cost = random.randint(100, 1000)
     print(f"Bad publicity! {reason} You lost {cost} due to the negative attention.")
     return cost
 
+    return reasons
 
 def main():
     budget = 1000
@@ -100,7 +96,14 @@ def main():
         print("5. Check your band")
         print("6. Quit")
 
-        action = int(input("Choose an action: "))
+        action = input("Choose an action: ")
+
+        # Check if the input is empty or not a number
+        if not action.isdigit():
+            print("Invalid choice. Please try again.")
+            continue
+
+        action = int(action)
 
         if action == 1:
             budget = hire_musician(budget, hired_musicians)
@@ -131,7 +134,6 @@ def main():
     print(f"Your final score: {budget}")
     save_high_score(budget)
 
-
 def save_high_score(score):
     high_scores_file = "high_scores.json"
     if os.path.exists(high_scores_file):
@@ -150,4 +152,3 @@ def save_high_score(score):
 
 if __name__ == "__main__":
     main()
-
